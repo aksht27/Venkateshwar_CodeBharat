@@ -68,7 +68,7 @@ Our vision is to create a game-changing platform that connects people who have l
 
 For inquiries, please reach out to us at:
 
-- **Email**: [support@lostandfound.com](mailto:gakshat431@gmail.com)
+- **Email**: [support@lostandfound.com](gakshat431@gmail.com)
 - **Website**: [www.lostandfound.com](https://aksht27.github.io/Venkateshwar_CodeBharat/)
 - **GitHub**: [GitHub Repository](https://github.com/aksht27/Venkateshwar_CodeBharat)
 
