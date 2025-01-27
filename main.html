@@ -48,17 +48,34 @@
     <div class="flex items-center space-x-4">
      <div id="google_translate_element">
      </div>
-     <button class="bg-yellow-500 text-white px-4 py-2 rounded-full">
-      + SHARE FOUND ITEM
-     </button>
-     <button class="bg-yellow-500 text-white px-4 py-2 rounded-full">
-      AUCTION SECTION
-     </button>
-     <button class="bg-yellow-500 text-white px-4 py-2 rounded-full" onclick="toggleChatWindow()">
-      <i class="fas fa-comments">
-      </i>
-      CHAT
-     </button>
+     <!-- Button -->
+<button 
+class="relative group bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 text-white px-6 py-3 rounded-full shadow-lg font-bold overflow-hidden hover:shadow-xl transition-all duration-300"
+onclick="openModal()"
+>
+<span class="absolute inset-0 bg-white opacity-10 rounded-full transform scale-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"></span>
+<span class="absolute -inset-0.5 border-2 border-transparent rounded-full group-hover:border-white transition-all duration-300"></span>
+<span class="relative z-10">+ SHARE FOUND ITEM</span>
+</button>
+
+
+     <a href="auction.html">
+        <button class="relative group bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white px-6 py-3 rounded-full shadow-lg font-bold overflow-hidden">
+          <span class="absolute inset-0 bg-yellow-400 transition-transform transform scale-x-0 group-hover:scale-x-100 origin-left z-0"></span>
+          <span class="relative z-10">AUCTION SECTION</span>
+        </button>
+      </a>
+      
+      <button 
+      class="relative group flex items-center gap-2 bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-3 rounded-full shadow-lg font-bold overflow-hidden hover:shadow-xl transition-all duration-300"
+      onclick="toggleChatWindow()"
+    >
+      <span class="absolute inset-0 bg-white opacity-10 rounded-full transform scale-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"></span>
+      <span class="absolute -inset-0.5 border-2 border-transparent rounded-full group-hover:border-white transition-all duration-300"></span>
+      <i class="fas fa-comments relative z-10 text-lg group-hover:scale-110 transition-transform duration-300 ease-in-out"></i>
+      <span class="relative z-10">CHAT</span>
+    </button>
+    
     </div>
    </div>
   </header>
@@ -88,6 +105,28 @@
     </a>
    </div>
   </nav>
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+      <h2 class="text-xl font-bold mb-4">Share Found Item</h2>
+      <form id="foundItemForm">
+        <div class="mb-4">
+          <label for="itemDetails" class="block text-sm font-medium text-gray-700">Item Details</label>
+          <textarea id="itemDetails" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Describe the item..."></textarea>
+        </div>
+        <div class="mb-4">
+          <label for="itemPhoto" class="block text-sm font-medium text-gray-700">Upload Photo</label>
+          <input type="file" id="itemPhoto" class="w-full p-2 border border-gray-300 rounded-md" />
+        </div>
+        <div class="flex justify-between">
+          <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded-full" onclick="closeModal()">Cancel</button>
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-full">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+    
+          
   <!-- Main content -->
   <main class="container mx-auto px-4 py-4">
    <!-- Carousel section -->
