@@ -28,3 +28,28 @@
          const chatWindow = document.getElementById('chatWindow');
          chatWindow.classList.toggle('open');
      }
+
+     // Function to open the modal
+function openModal() {
+    document.getElementById("modal").classList.remove("hidden");
+  }
+  
+  // Function to close the modal
+  function closeModal() {
+    document.getElementById("modal").classList.add("hidden");
+  }
+  
+  // Form submission handler (optional)
+  document.getElementById("foundItemForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission to demonstrate modal logic
+    
+    const itemDetails = document.getElementById("itemDetails").value;
+    const itemPhoto = document.getElementById("itemPhoto").files[0];
+  
+    // Handle form submission logic (e.g., send data to server)
+    alert(`Item Details: ${itemDetails}\nItem Photo: ${itemPhoto ? itemPhoto.name : 'No photo uploaded'}`);
+  
+    // Close the modal after submitting
+    closeModal();
+  });
+  
